@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import mqtt from 'mqtt';
 import SensorPage from './SensorPage';
+import './App.css';
+
 
 class App extends Component {
   constructor(props) {
@@ -60,6 +62,7 @@ class App extends Component {
   handleToggleConnection() {
     if (this.state.isConnected) {
       this.disconnectFromMqtt();
+      window.location.href = '/';
     } else {
       this.connectToMqtt(this.state.mqttUrl);
     }
@@ -76,41 +79,43 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div style={{ display: 'flex' }}>
-          <div style={styles.sidebar}>
-            <h2 style={styles.sidebarTitle}>Sensors</h2>
+        <div className="container">
+          <div className='header'>
+            <img className='logo' src='../src/assets/sensor.png' />
+          </div>
+          <div className="subHeader">
+            <h2 className="subHeaderTitle">MQTT Broker:</h2>
             <input
               type="text"
               value={this.state.mqttUrl}
               onChange={this.handleUrlChange}
-              placeholder="MQTT Broker: "
-              style={{ marginBottom: '10px' }}
+              placeholder="url"
+              className="text"
             />
-            <button onClick={this.handleToggleConnection}>
+            <button className="button" onClick={this.handleToggleConnection}>
               {this.state.isConnected ? 'Disconnect' : 'Connect'}
             </button>
-            <ul style={styles.sidebarList}>
+          </div>
+          <div className="navbar">
+            <ul className="sidebarList">
               {Object.keys(this.state.sensorDataList).map(sensorName => (
                 <li
                   key={sensorName}
-                  style={{
-                    ...styles.sidebarItem,
-                    backgroundColor: this.state.hoveredSensor === sensorName ? '#ddd' : 'transparent'
-                  }}
+                  className="sidebarItem"
                   onMouseEnter={() => this.handleMouseEnter(sensorName)}
                   onMouseLeave={() => this.handleMouseLeave()}
                 >
-                  <Link to={`/sensor/${sensorName}`} style={styles.sidebarLink}>{sensorName}</Link>
+                  <Link to={`/sensor/${sensorName}`} className="sidebarLink">{sensorName}</Link>
                 </li>
               ))}
             </ul>
           </div>
-          <div style={{ flex: 1, padding: '20px' }}>
+          <div className="main-content">
             <Routes>
               <Route
                 exact
                 path="/"
-                element={<div></div>} 
+                element={<div></div>}
               />
               <Route
                 path="/sensor/:sensorName"
@@ -123,33 +128,4 @@ class App extends Component {
     );
   }
 }
-
-const styles = {
-  sidebar: {
-    width: '200px',
-    background: '#f0f0f0',
-    padding: '20px',
-    borderRight: '1px solid #ccc',
-  },
-  sidebarTitle: {
-    margin: '0 0 20px',
-    padding: '0',
-  },
-  sidebarList: {
-    listStyle: 'none',
-    padding: 0,
-  },
-  sidebarItem: {
-    marginBottom: '10px',
-    transition: 'background-color 0.3s',
-  },
-  sidebarLink: {
-    color: '#333',
-    textDecoration: 'none',
-    display: 'block',
-    padding: '5px 10px',
-    borderRadius: '3px',
-  },
-};
-
 export default App;
