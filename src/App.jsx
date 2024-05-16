@@ -4,7 +4,6 @@ import mqtt from 'mqtt';
 import SensorPage from './SensorPage';
 import './App.css';
 
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -55,10 +54,6 @@ class App extends Component {
     }
   }
 
-  handleMouseEnter(sensorName) {
-    this.setState({ hoveredSensor: sensorName });
-  }
-
   handleToggleConnection() {
     if (this.state.isConnected) {
       this.disconnectFromMqtt();
@@ -66,6 +61,10 @@ class App extends Component {
     } else {
       this.connectToMqtt(this.state.mqttUrl);
     }
+  }
+
+  handleMouseEnter(sensorName) {
+    this.setState({ hoveredSensor: sensorName });
   }
 
   handleMouseLeave() {

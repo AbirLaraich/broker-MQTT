@@ -1,6 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1715454849687" clover="3.2.0">
-  <project timestamp="1715454849687" name="All files">
-    <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0" elements="0" coveredelements="0" complexity="0" loc="0" ncloc="0" packages="0" files="0" classes="0"/>
+<coverage generated="1715894323172" clover="3.2.0">
+  <project timestamp="1715894323172" name="All files">
+    <metrics statements="39" coveredstatements="27" conditionals="17" coveredconditionals="14" methods="17" coveredmethods="10" elements="73" coveredelements="51" complexity="0" loc="39" ncloc="39" packages="1" files="2" classes="2"/>
+    <file name="App.jsx" path="C:\Users\larai\Documents\M1-IWOCS\Web\JS-TP\web-react-router\src\App.jsx">
+      <metrics statements="34" coveredstatements="22" conditionals="10" coveredconditionals="7" methods="15" coveredmethods="8"/>
+      <line num="9" count="5" type="stmt"/>
+      <line num="10" count="5" type="stmt"/>
+      <line num="16" count="5" type="stmt"/>
+      <line num="17" count="5" type="stmt"/>
+      <line num="21" count="5" type="cond" truecount="2" falsecount="0"/>
+      <line num="22" count="1" type="stmt"/>
+      <line num="27" count="1" type="stmt"/>
+      <line num="29" count="1" type="stmt"/>
+      <line num="30" count="1" type="stmt"/>
+      <line num="31" count="1" type="stmt"/>
+      <line num="32" count="1" type="stmt"/>
+      <line num="35" count="1" type="stmt"/>
+      <line num="36" count="0" type="stmt"/>
+      <line num="37" count="0" type="stmt"/>
+      <line num="38" count="0" type="stmt"/>
+      <line num="39" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="40" count="0" type="stmt"/>
+      <line num="42" count="0" type="stmt"/>
+      <line num="43" count="0" type="stmt"/>
+      <line num="47" count="1" type="stmt"/>
+      <line num="51" count="1" type="cond" truecount="1" falsecount="1"/>
+      <line num="52" count="1" type="stmt"/>
+      <line num="53" count="1" type="stmt"/>
+      <line num="58" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="59" count="1" type="stmt"/>
+      <line num="60" count="1" type="stmt"/>
+      <line num="62" count="1" type="stmt"/>
+      <line num="67" count="0" type="stmt"/>
+      <line num="71" count="0" type="stmt"/>
+      <line num="75" count="2" type="stmt"/>
+      <line num="79" count="9" type="stmt"/>
+      <line num="101" count="0" type="stmt"/>
+      <line num="104" count="0" type="stmt"/>
+      <line num="105" count="0" type="stmt"/>
+    </file>
+    <file name="SensorPage.jsx" path="C:\Users\larai\Documents\M1-IWOCS\Web\JS-TP\web-react-router\src\SensorPage.jsx">
+      <metrics statements="5" coveredstatements="5" conditionals="7" coveredconditionals="7" methods="2" coveredmethods="2"/>
+      <line num="6" count="3" type="stmt"/>
+      <line num="7" count="3" type="stmt"/>
+      <line num="8" count="3" type="stmt"/>
+      <line num="10" count="3" type="stmt"/>
+      <line num="27" count="6" type="stmt"/>
+    </file>
   </project>
 </coverage>

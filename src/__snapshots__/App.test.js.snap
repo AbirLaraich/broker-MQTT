@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Afficher les capteurs dans sidebar 1`] = `
+<div
+  class="container"
+>
+  <div
+    class="header"
+  >
+    <img
+      class="logo"
+      src="../src/assets/sensor.png"
+    />
+  </div>
+  <div
+    class="subHeader"
+  >
+    <h2
+      class="subHeaderTitle"
+    >
+      MQTT Broker:
+    </h2>
+    <input
+      class="text"
+      placeholder="url"
+      type="text"
+      value="wss://random.pigne.org"
+    />
+    <button
+      class="button"
+    >
+      Connect
+    </button>
+  </div>
+  <div
+    class="navbar"
+  >
+    <ul
+      class="sidebarList"
+    />
+  </div>
+  <div
+    class="main-content"
+  >
+    <div />
+  </div>
+</div>
+`;
