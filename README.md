@@ -34,6 +34,8 @@ Voici quelques captures d'écran de l'application :
 ![alt text](image-2.png)
 *Affiche les données des capteurs (``l'historique`` des valeurs, la valeur ``actuelle``) .*
 
+![alt text](image-4.png)
+*Résultat des tests uniatires .*
 ## Auteur
 
 |Nom|Prénom|login|email|
